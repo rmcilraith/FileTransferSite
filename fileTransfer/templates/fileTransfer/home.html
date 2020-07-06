@@ -1,0 +1,6 @@
+{% extends 'fileTransfer/base.html' %}
+
+{% block content %}
+    <h1 class="mb-3">Home</h1>
+    <p>Welcome to the File Transfer site, {% if user.is_authenticated %}{{ user.username }}{% else %}visitor{% endif %}!</p>
+{% endblock %}

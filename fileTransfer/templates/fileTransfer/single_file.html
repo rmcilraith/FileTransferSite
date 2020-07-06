@@ -1,0 +1,25 @@
+{% extends 'fileTransfer/base.html' %}
+
+{% block content %}
+    <h1 class="mb-3">Files</h1>
+    <table class="table mb-0">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Uploaded by</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ single_file.title }}</td>
+                <td>{{ single_file.uploaded_by }}</td>
+                <td>
+                    <a href="{{ single_file.document.url }}" class="btn btn-primary btn-sm" download>
+                        Download
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
